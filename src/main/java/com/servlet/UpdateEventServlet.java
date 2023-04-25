@@ -38,7 +38,7 @@ public class UpdateEventServlet extends HttpServlet {
 		boolean f = dao.UpdateEvent(event);
 
 		if (f) {
-			session.setAttribute("SuccessMsg", "Event updated successfull");
+			session.setAttribute("SuccessMsg", "Event updated successfully");
 			resp.sendRedirect("index.jsp");
 		} else {
 			session.setAttribute("ErrorMsg", "Error updating the event!");

@@ -1,13 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Add Event</title>
 <%@include file="CommonCSS.jsp"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page isELIgnored="false"%>
 
 </head>
 <body class="bg-light">
@@ -27,7 +28,7 @@
 							<p class="text-center text-success">${ErrorMsg}</p>
 							<c:remove var="ErrorMsg" />
 						</c:if>
-						
+
 						<form action="AddEvent" method="post">
 							<div class="d-grid gap-3" style="width: 500px;">
 								<div class="col-md-auto">
@@ -58,11 +59,13 @@
 										<option selected>Select Category</option>
 										<option value="Music">Music</option>
 										<option value="Business">Business</option>
+										<option value="Sports">Sports</option>
+										<option value="Concert">Concert</option>
 										<option value="Exhibition">Exhibition</option>
 									</select>
 								</div>
 								<div class="col-md-auto">
-									<label class="form-control">Description</label> <input
+									<label class="form-label">Description</label> <input
 										class="form-control" name="E_Description" type="text"
 										placeholder="Description">
 								</div>

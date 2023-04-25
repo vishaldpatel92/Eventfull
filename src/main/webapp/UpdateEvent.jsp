@@ -50,7 +50,7 @@
 										placeholder="Enter event name">
 								</div>
 								<div class="col-md-auto">
-									<label class="form-label">Select start time</label> <input"src/main/webapp/UpdateEvent.jsp"
+									<label class="form-label">Select start time</label> <input
 										id="startDate" class="form-control" name="E_Start" type="date" value="<%=e.getEventStartDate() %>" />
 									<span id="startDateSelected"></span>
 								</div>

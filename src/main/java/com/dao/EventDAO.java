@@ -34,11 +34,10 @@ public class EventDAO {
 			if (i == 1) {
 				f = true;
 			}
-			// stmt.close();
+			stmt.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 		return f;
 	}
 
@@ -59,7 +58,6 @@ public class EventDAO {
 				event.setEventDescription(rs.getString("E_Description"));
 				events.add(event);
 			}
-
 			rs.close();
 			stmt.close();
 		} catch (SQLException e) {
@@ -119,7 +117,27 @@ public class EventDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return f;
+	}
 
+	public boolean DeleteEvent(int id) {
+		boolean f = false;
+		try {
+			PreparedStatement stmt = conn.prepareStatement("DELETE FROM Events WHERE E_ID = ?");
+			stmt.setInt(1, id);
+			int i = stmt.executeUpdate();
+			System.out.println("Update executed");
+
+			if (i == 1) {
+				f = true;
+			}
+			stmt.executeUpdate();
+			stmt.close();
+		} catch (
+
+		SQLException e) {
+			e.printStackTrace();
+		}
 		return f;
 	}
 

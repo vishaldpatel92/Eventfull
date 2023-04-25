@@ -16,7 +16,7 @@ import com.entity.Event;
 @WebServlet("/AddEvent")
 public class Register extends HttpServlet {
 
-	private static final long serialVersionUID = 1L;
+	// private static final long serialVersionUID = 1L;
 
 	// @Override
 	@Override
@@ -39,7 +39,7 @@ public class Register extends HttpServlet {
 		boolean f = dao.AddEvent(event);
 
 		if (f) {
-			session.setAttribute("SuccessMsg", "Event added successfull");
+			session.setAttribute("SuccessMsg", "Event added successfully");
 			resp.sendRedirect("AddEvent.jsp");
 		} else {
 			session.setAttribute("ErrorMsg", "Error adding the event!");
