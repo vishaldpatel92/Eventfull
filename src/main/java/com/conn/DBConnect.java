@@ -10,7 +10,7 @@ public class DBConnect {
 	public static Connection getConn() {
 		String url = "jdbc:mysql://localhost:3306/Eventfull";
 		String username = "root";
-		String password = "$tanf0rd";
+		String password = "password";
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(url, username, password);
